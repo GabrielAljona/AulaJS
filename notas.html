@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCOLA</title>
+</head>
+
+<body>
+
+    <script>
+
+        nota = prompt('digite o valor da nota')
+
+        if (nota >=8) {
+            alert('APROVADO')
+        } else if(nota >5){
+            Alert('TEM DIREITO A RECUPERAÇÃO')
+        } else{
+            alert('REPROVADO')
+        }
+        
+        presença = prompt('digite o valor da presença')
+        if (presença >70){
+            alert('APROVADO')
+        } else if(presença <70){
+            alert('REPROVADO')
+        } else{
+            alert('RECUPERAÇÃO')
+        }
+
+        if(nota >=5 && presença >=70)
+            alert('APROVADO')
+        else if(nota <5 || presença <70){
+            alert('REPROVADO')
+        } else{
+            alert('RECUPERAÇÃO')
+        }
+        
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        sala = 9
+        alunos = prompt('Digite a quantidade de alunos');
+        professor = prompt('O professor esta presente? (S/N)')
+
+        Console.log(professor)
+        if (professor == "S"){
+            alert('hoje vai ter eula na sala  '+ sala)
+        }
+        if (alunos > 10) {
+            alert('mais da metade da sala veio')
+        } else if (alunos > 5) {
+            alert('poucos alunos vieram a aula')
+        } else {
+            alert('poucos alunos, pode cancelar a aula');
+        }
+        
+
+        if (professor > 0) {
+            alert('hoje vai ter aula na sala ' + sala)
+        } else if (professor < 1) {
+            alert('não tera professor na aula da sala ' + sala)
+        }
+         else{
+            alert('Aula cancelada professor nao veio')
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
