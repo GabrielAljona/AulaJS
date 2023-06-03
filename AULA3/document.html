@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo</title>
+</head>
+
+
+
+<body>
+
+    <select name="jokenpo" id="jokenpo">
+        <option value="pedra">pedra</option>
+        <option value="papel">papel</option>
+        <option value="tesoura">tesoura</option>
+    </select>
+    <button onclick="jogar()">jogar</button>
+    
+    <div id = "minha_jogada"></div>
+    <div id = "maqjogada1 "></div>
+
+    <script>
+        function jogar(){
+        jogada = document.getElementById('jokenpo').value
+        console.log(jogada)
+            
+            img = document.createElement('img')
+            // img.src = 'papel.png'
+            // img.alt = 'papel'
+            console.log(img)
+
+            img.src = jogada + '.png'
+            img.alt = jogada
+
+            minha_jogada = document.getElementById('minha_jogada')
+            minha_jogada.innerHTML = ' '          
+            minha_jogada.appendChild(img)
+
+            maquina_jogada = Math.floor(Math.random() * 3)
+            console.log(maquina_jogada)
+
+            jogadas_possiveis = ('pedra','papel','tesoura')
+            console.log(jogadas_possiveis[maquina_jogada])
+
+            maq = document.createElement('img')
+            maq.src = 'papel.png'
+            maq.alt = 'papel'
+            console.log(img)
+
+            
+        }
+
+    </script>
+
+</body>
+</html>
