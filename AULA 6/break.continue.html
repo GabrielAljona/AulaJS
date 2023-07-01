@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 6</title>
+</head>
+<body>
+
+    <button onclick="Break()">Break></button>
+
+<script>
+
+    function Break(){
+        n_vezes = prompt('Digite quantas vezes você quer rodar o sistema')
+
+        for (let i = 0; i < n_vezes; i++) {
+            console.log('sistema'+ i)  
+
+            if ( i == 3){
+                continue // continue vai pular a contagem
+            }
+            
+            if (i == 35){
+                break // esta parando o sistema com a contagem de 100 independente do valor digitado
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+</script>
+
+
+    
+    
+</body>
+</html>
