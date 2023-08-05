@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <script src="code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+    
+    <div id="taskList">
+        <!-- 1- receber dados escritos no campo
+        2- verificar se tem ou nao valor no campo, se tiver receber e incluir na lista se nao tiver mensagem de erro alerta de "tarefa não digitada"
+        3- incluir tarefa nas listas 
+        4- se conlcuida botao concluido mensagem verde, se apagar deletar lista 
+        5- contador de tarefas concluidas e apagadas com filtros (diario e mensal) -->
+
+    </div>
+
+    <input type="text" id="newTask" placeholder="Digite uma nova tarefa">
+    <button id="addTask">Adicionar</button>
+    <button id="clearCompleted">Limpar concluídas</button>
+
+    <script>
+        //adicionar tarefa e lista
+        $('#addTask').click(() => {
+           var newTask = $('#newTask').val().trim()
+            $('taskLisk').html(newTask)
+
+            var taskItem = $("<div></div>").text(taskText)
+            taskItem.addClass("task");
+
+            var doneButton = $("<button>Concluido</button>").click(function (){
+                taskItem.addClass("done");
+            });
+
+            var deleteButton = $("<button>Remover</button").click(function(){
+                taskItem.remove();
+            })
+        
+            taskItem.appen(doneButton, deleteButton);
+            $("#taskList").append(taskItem);
+        
+        })
+
+        // Evento ao clicar no botão "Adicionar"
+        $("#addTask").click(function(){
+            var newTask = $("newTask").val().trim();
+            if (newTaskText !== "") {
+                addTask(newTaskText);
+                $("newTask").val("");
+            }
+        });
+
+        // Evento ao pressionar a tecla "Enter" no campo de texto
+        $("newTask").keypress(function (event){
+            if (event.which === 13 ){
+                $("addTask").click();
+            }
+        });
+
+        // Evento ao clicar no botão "Limpar concluidas"
+        $("clearCompleted").click(function (){
+            $(".done").remove();
+        });
+
+    </script>
+</body>
+
+</html>
