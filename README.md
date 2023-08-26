@@ -1,2 +1,2 @@
-# AulaJS
+# JavaScript
 Aula JavaScript
